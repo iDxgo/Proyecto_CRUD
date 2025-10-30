@@ -18,7 +18,7 @@ class Load_ui_productos(QtWidgets.QMainWindow):
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setWindowOpacity(1)
         #Cerrar ventana
-        self.boton_salir.clicked.connect(lambda: self.close())
+        self.boton_salir.clicked.connect(self.abrir_menu)
         # mover ventana
         self.frame_superior.mouseMoveEvent = self.mover_ventana
         #menu lateral
@@ -132,6 +132,12 @@ class Load_ui_productos(QtWidgets.QMainWindow):
             self.tabla_consulta.setItem(fila,2,QtWidgets.QTableWidgetItem(str(item[3])))
             self.tabla_consulta.setItem(fila,3,QtWidgets.QTableWidgetItem(str(item[4])))
             fila+=1
+
+    def abrir_menu(self):
+        from load.load_ui_menu import Load_ui_menu
+        menu = Load_ui_menu()
+        menu.show()
+        self.hide()
 
     # 6.- mover ventana
     def mousePressEvent(self, event):

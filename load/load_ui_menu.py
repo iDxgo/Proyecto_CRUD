@@ -25,3 +25,4 @@ class Load_ui_menu(QtWidgets.QMainWindow):
         productos = Load_ui_productos()
         productos.show()
         self.hide()
+

@@ -66,15 +66,13 @@ QPushButton {
 }
 
 QPushButton:hover {
-    background-color: #3182ce;
+    background-color: #2CC5E6;
     color: #ffffff;
     border: 1px solid #2c5aa0;
-    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-        stop:0 #4fa5f0, stop:1 #3182ce);
 }
 
 QPushButton:pressed {
-    background-color: #2c5aa0;
+    background-color: #00416B;
     color: #ffffff;
     border: 1px solid #1e4a7e;
     background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
@@ -110,12 +108,12 @@ QPushButton:pressed {
         stop:0 #FC8D9B, stop:1 #CC0520);
 }
 #boton_salir:hover {
-    background-color: #f56565;
+    background-color: #FC8D9B;
     background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-        stop:0 #f56565, stop:1 #e53e3e);
+        stop:0 #FC8D9B, stop:1 #FB6075);
 }
 #boton_salir:pressed {
-    background-color: #e53e3e;
+    background-color: #CC0520;
     background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
         stop:0 #e53e3e, stop:1 #c53030);
 }

@@ -18,7 +18,7 @@ class Load_ui_clientes(QtWidgets.QMainWindow):
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setWindowOpacity(1)
         #Cerrar ventana
-        self.boton_salir.clicked.connect(lambda: self.close())
+        self.boton_salir.clicked.connect(self.abrir_menu)
         # mover ventana
         self.frame_superior.mouseMoveEvent = self.mover_ventana
         #menu lateral
@@ -149,6 +149,12 @@ class Load_ui_clientes(QtWidgets.QMainWindow):
             self.showMaximized()
         else:
             self.showNormal()
+            
+    def abrir_menu(self):
+        from load.load_ui_menu import Load_ui_menu
+        menu = Load_ui_menu()
+        menu.show()
+        self.hide()
 
 #7.- Mover menú
     def mover_menu(self):
