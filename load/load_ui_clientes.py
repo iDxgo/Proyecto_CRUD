@@ -48,8 +48,8 @@ class Load_ui_clientes(QtWidgets.QMainWindow):
     def guardar_producto(self): #Bien
         self.clientedao.cliente.clave = self.sku_agregar.text()
         self.clientedao.cliente.Nombre = self.descripcion_agregar.text()
-        self.clientedao.cliente.Direccion = int(self.existencia_agregar.text())
-        self.clientedao.cliente.Telefono = float(self.precio_agregar.text())
+        self.clientedao.cliente.Direccion = self.existencia_agregar.text()
+        self.clientedao.cliente.Telefono = self.precio_agregar.text()
         self.clientedao.insertarProducto()
         self.label.setText(f"Cliente Agregado")
 
@@ -63,8 +63,8 @@ class Load_ui_clientes(QtWidgets.QMainWindow):
     def actualizar_producto(self): #Bien
         self.clientedao.cliente.clave = self.sku_actualizar.text()
         self.clientedao.cliente.Nombre = self.descripcion_actualizar.text()
-        self.clientedao.cliente.Direccion = int(self.existencia_actualizar.text())
-        self.clientedao.cliente.Telefono = float(self.precio_actualizar.text())
+        self.clientedao.cliente.Direccion = self.existencia_actualizar.text()
+        self.clientedao.cliente.Telefono = self.precio_actualizar.text()
         self.clientedao.actualizarProducto()
         self.label.setText(f"Cliente '{self.clientedao.cliente.Nombre}' actualizado")
 
